@@ -2,12 +2,8 @@
 ## Initialization
 ################################################################################
 
-## The init offset statement causes the initialization statements in this file
-## to run before init statements in any other file.
 init offset = -2
 
-## Calling gui.init resets the styles to sensible default values, and sets the
-## width and height of the game.
 init python:
     gui.init(1080, 1920)
 
@@ -16,7 +12,6 @@ init python:
 ################################################################################
 ## GUI Configuration Variables
 ################################################################################
-
 
 ## Colors ######################################################################
 ##
@@ -28,7 +23,7 @@ init python:
 define gui.accent_color = "#ffffcc"
 define gui.title_text_size = 81
 style main_menu_title:
-    font "test.ttf"
+    font "name_heroic_textbox.ttf"
 
     outlines [
         (0, "#000000", 0, 0),      # тонкая обводка
@@ -59,23 +54,14 @@ define gui.muted_color = '#003d51'
 define gui.hover_muted_color = '#005b7a'
 
 ## The colors used for dialogue and menu choice text.
-define gui.text_color = '#ffffff'
+
 define gui.interface_text_color = '#ffffff'
 
 
 ## Fonts and Font Sizes ########################################################
 
-## The font used for in-game text.
-define gui.text_font = "DejaVuSans.ttf"
-
-## The font used for character names.
-define gui.name_text_font = "DejaVuSans.ttf"
-
 ## The font used for out-of-game text.
 define gui.interface_text_font = "DejaVuSans.ttf"
-
-## The size of normal dialogue text.
-define gui.text_size = 45
 
 ## The size of the History screen text.
 define gui.history_text_size = 40
@@ -103,7 +89,7 @@ define gui.game_menu_background = "gui/game_menu.png"
 ## time.
 
 ## The height of the textbox containing dialogue.
-define gui.textbox_height = 384
+define gui.textbox_height = 408
 define gui.textbox_yalign = 0.85
 
 
@@ -111,9 +97,18 @@ define gui.textbox_yalign = 0.85
 ## These can be a whole number of pixels from the left or top, or 0.5 to center.
 
 #Имя персонада в диалоговом окне
-define gui.name_xpos = 470
+define gui.name_xpos = 400
 define gui.name_ypos = -395
 define gui.name_text_size = 50
+define gui.name_xalign = 0.5
+define gui.name_text_font = "name_heroic_textbox.ttf"
+
+#Текст персонжда в диалоговом окне
+define gui.dialogue_xpos = 170
+define gui.dialogue_ypos = -270
+define gui.text_size = 50
+define gui.text_font = "dialog_heroic_textbox.ttf"
+define gui.text_color = '#ffffff'
 
 ## The horizontal alignment of the character's name. This can be 0.0 for left-
 ## aligned, 0.5 for centered, and 1.0 for right-aligned.
@@ -131,10 +126,6 @@ define gui.namebox_borders = Borders(10, 10, 10, 10)
 ## If True, the background of the namebox will be tiled, if False, the
 ## background of the namebox will be scaled.
 define gui.namebox_tile = False
-
-#Текст персонжда в диалоговом окне
-define gui.dialogue_xpos = 170
-define gui.dialogue_ypos = -294
 
 ## The maximum width of dialogue text, in pixels.
 define gui.dialogue_width = 825

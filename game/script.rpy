@@ -1,5 +1,5 @@
 ﻿# GABRIELA
-define gab_text = Character("Габриэла", image="к", color="#0099cc")
+define gab_text = Character("Габриэла", image="к", color="#c2c2c2")
 define gab_text_nvl = Character("Габриэла", kind=nvl, image="edgy")
 image gabriela normal   = "heroes/Gabriela/normal.png"
 image gabriela happy    = "heroes/Gabriela/happy.png"
@@ -8,7 +8,7 @@ image gabriela shy      = "heroes/Gabriela/shy.png"
 image gabriela surprise = "heroes/Gabriela/surprise.png"
 
 # MASON
-define mas_text = Character("Мейсон", image="к", color="#0099cc")
+define mas_text = Character("Мейсон", image="к", color="#ababab")
 define mas_text_nvl = Character("Мейсон", kind=nvl, image="edgy")
 image mason normal   = "heroes/Mason/normal.png"
 image mason happy    = "heroes/Mason/happy.png"
@@ -18,7 +18,7 @@ image mason surprise = "heroes/Mason/surprise.png"
 image mason angry    = "heroes/Mason/angry.png"
 
 # BOWIE
-define bow_text = Character("Боуи", image="к", color="#0099cc")
+define bow_text = Character("    Боуи", image="к", color="#ababab")
 define bow_text_nvl = Character("Боуи", kind=nvl, image="edgy")
 image bowie normal   = "heroes/Bowie/normal.png"
 image bowie happy    = "heroes/Bowie/happy.png"
@@ -26,9 +26,11 @@ image bowie sad      = "heroes/Bowie/sad.png"
 image bowie vampire  = "heroes/Bowie/vampire.png"
 
 
+define dictore = Character("        . . .", image="к", color="#ababab")
+define dictore_nvl = Character("...", kind=nvl, image="edgy")
 
 # STACEY
-define sta_text = Character("Стейси", image="к", color="#0099cc")
+define sta_text = Character("Стейси", image="к", color="#ababab")
 define sta_text_nvl = Character("Стейси", kind=nvl, image="edgy")
 image stacey normal = "heroes/Stecey/normal.png"
 image stacey happy = "heroes/Stecey/happy.png"
@@ -40,7 +42,7 @@ image stacey surprise = "heroes/Stecey/surprise.png"
 image stacey vampire = "heroes/Stecey/vampire.png"
 
 # STACEY
-define sta_text = Character("Оливия", image="к", color="#0099cc")
+define sta_text = Character("Оливия", image="к", color="#ababab")
 define sta_text_nvl = Character("Оливия", kind=nvl, image="edgy")
 image olivia normal = "heroes/Olivia/normal.png"
 image olivia happy = "heroes/Olivia/happy.png"
@@ -50,6 +52,7 @@ image olivia shy = "heroes/Olivia/shy.png"
 
 
 init python:
+
     gabriela = [
         "gabriela normal",   #0
         "gabriela happy",    #1
@@ -105,15 +108,22 @@ init python:
         )
 
 
-image blank = "gui/game_menu.png"
+image airport = "gui/BGs/airport.png"
 
 
 label start:
 
-    scene blank
+    scene black
 
+    hide main_char
+    dictore "Хитроу встретил меня типичным британским гостеприимством: серым небом и очередями."
+    dictore "Перелет из Штатов прошел терпимо, если не считать легкой турбулентности над Атлантикой."
+    dictore "Но это мелочи. Главное испытание впереди: два семестра в Оксфорде по обмену."
+    dictore "Из Гарварда — в самую древнюю дыру Англии."
+    
+    scene airport
     $ swap_char(gabriela, 0, small_char)
-    gab_text "Я самая пиздатая"
+    gab_text "Боже, этот акцент... Он уже сверлит мне мозг. Надеюсь, местные профессора хотя бы знают, что такое дезодорант, в отличие от людей в этой толпе"
 
     $ swap_char(mason, 1, small_char)
     mas_text "Я знаю"
