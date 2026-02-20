@@ -13,29 +13,13 @@ screen quick_menu():
     ## Ensure the quick menu appears above other screens
     zorder 100
 
-    ## Only show if the quick menu is allowed
-    if quick_menu:
-
-        ## The button used to determine textbox or top of screen alignment.
-        if config.developer and persistent.quick_menu_style and not in_nvl:
-            use quick_menu_a
-
-        ## Determine quick menu style to use
-        if persistent.quick_menu_style and persistent.quick_menu_align:
-
-            use quick_menu_b
-
-        elif persistent.quick_menu_style and not persistent.quick_menu_align:
-
-            use quick_menu_c
-
-        elif not persistent.quick_menu_style:
-            use quick_menu_ham
+    use quick_menu_ham
+            
 
 
 screen quick_menu_a():
     vbox:
-        xalign -.0
+        xalign -4.0
         yalign 0.26
         imagebutton:
             alt "Toggle quick menu position"

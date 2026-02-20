@@ -80,9 +80,6 @@ define gui.text_size = 45
 ## The size of the History screen text.
 define gui.history_text_size = 40
 
-## The size of character names.
-define gui.name_text_size = 40
-
 ## The size of text in the game's user interface.
 define gui.interface_text_size = 45
 
@@ -107,18 +104,16 @@ define gui.game_menu_background = "gui/game_menu.png"
 
 ## The height of the textbox containing dialogue.
 define gui.textbox_height = 384
-
-## The placement of the textbox vertically on the screen. 0.0 is the top, 0.5 is
-## center, and 1.0 is the bottom.
-define gui.textbox_yalign = 0.65
+define gui.textbox_yalign = 0.85
 
 
 ## The placement of the speaking character's name, relative to the textbox.
 ## These can be a whole number of pixels from the left or top, or 0.5 to center.
 
 #Имя персонада в диалоговом окне
-define gui.name_xpos = 267
-define gui.name_ypos = -50
+define gui.name_xpos = 470
+define gui.name_ypos = -395
+define gui.name_text_size = 50
 
 ## The horizontal alignment of the character's name. This can be 0.0 for left-
 ## aligned, 0.5 for centered, and 1.0 for right-aligned.
@@ -137,14 +132,9 @@ define gui.namebox_borders = Borders(10, 10, 10, 10)
 ## background of the namebox will be scaled.
 define gui.namebox_tile = False
 
-
-## The placement of dialogue relative to the textbox. These can be a whole
-## number of pixels relative to the left or top side of the textbox, or 0.5 to
-## center.
-
 #Текст персонжда в диалоговом окне
-define gui.dialogue_xpos = 200
-define gui.dialogue_ypos = 44
+define gui.dialogue_xpos = 170
+define gui.dialogue_ypos = -294
 
 ## The maximum width of dialogue text, in pixels.
 define gui.dialogue_width = 825
