@@ -30,7 +30,7 @@ image bowie vampire  = "heroes/Bowie/vampire.png"
 # STACEY
 define sta_text = Character("Стейси", image="к", color="#0099cc")
 define sta_text_nvl = Character("Стейси", kind=nvl, image="edgy")
-image  stacey normal = "heroes/Stecey/normal.png"
+image stacey normal = "heroes/Stecey/normal.png"
 image stacey happy = "heroes/Stecey/happy.png"
 image stacey angry = "heroes/Stecey/angry.png"
 image stacey cry = "heroes/Stecey/cry.png"
@@ -39,30 +39,57 @@ image stacey shy = "heroes/Stecey/shy.png"
 image stacey surprise = "heroes/Stecey/surprise.png"
 image stacey vampire = "heroes/Stecey/vampire.png"
 
+# STACEY
+define sta_text = Character("Оливия", image="к", color="#0099cc")
+define sta_text_nvl = Character("Оливия", kind=nvl, image="edgy")
+image olivia normal = "heroes/Olivia/normal.png"
+image olivia happy = "heroes/Olivia/happy.png"
+image olivia angry = "heroes/Olivia/angry.png"
+image olivia sad = "heroes/Olivia/sad.png"
+image olivia shy = "heroes/Olivia/shy.png"
+
 
 init python:
     gabriela = [
-        "gabriela normal",
-        "gabriela happy",
-        "gabriela angry",
-        "gabriela shy",
-        "gabriela surprise",
+        "gabriela normal",   #0
+        "gabriela happy",    #1
+        "gabriela angry",    #2
+        "gabriela shy",      #3
+        "gabriela surprise", #4
     ]
 
     mason = [
-        "mason normal",
-        "mason happy",
-        "mason sad",
-        "mason shy",
-        "mason surprise",
-        "mason angry",
+        "mason normal",   #0
+        "mason happy",    #1
+        "mason sad",      #2
+        "mason shy",      #3
+        "mason surprise", #4
+        "mason angry",    #5
     ]
 
     bowie = [
-        "bowie normal",
-        "bowie happy",
-        "bowie sad",
-        "bowie vampire",
+        "bowie normal",  #0
+        "bowie happy",   #1
+        "bowie sad",     #2
+        "bowie vampire", #3
+    ]
+
+    stacey = [
+        "stacey normal",   #0
+        "stacey happy",    #1
+        "stacey angry",    #2
+        "stacey cry",      #3
+        "stacey sad",      #4
+        "stacey surprise", #5
+        "stacey vampire",  #6
+    ]
+
+    olivia = [
+        "olivia normal",   #0
+        "olivia happy",    #1
+        "olivia angry",    #2
+        "olivia sad",      #3
+        "olivia sad",      #4
     ]
 
     small_char = Transform(
@@ -94,8 +121,8 @@ label start:
     $ swap_char(bowie, 3, small_char)
     bow_text "А я вампир"
 
-
-    e "Lets use an asset in the public domain, a poem by Edgar Allan Poe - The Raven."
+    $ swap_char(bowie, 0, small_char)
+    bow_text "Ну тут прям очень огромный текст что не могу. Он создан чисто для проверки как себя поведет прям очень огромный текст. Проверка длинного слова танаталогия"
 
     #Выбор
     menu:
