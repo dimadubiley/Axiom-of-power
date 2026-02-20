@@ -396,12 +396,12 @@ screen mm_content():
 
             vbox:
                 xalign 0.5
-                ypos 0.5
+                ypos 0.125
                 text "[config.name!t]":
                     style "main_menu_title"
 
-                text "[config.version]":
-                    style "main_menu_version"
+                # text "[config.version]":
+                #     style "main_menu_version"
 
 ## text alignment adjusted in line 289 or gui.rpy
 # define gui.main_menu_text_xalign = 0.5

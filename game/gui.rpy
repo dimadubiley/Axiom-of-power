@@ -24,7 +24,17 @@ init python:
 
 ## An accent color used throughout the interface to label and highlight text.
 #define gui.accent_color = '#0099cc'
-define gui.accent_color = '#010101'
+
+define gui.accent_color = "#ffffcc"
+define gui.title_text_size = 81
+style main_menu_title:
+    font "test.ttf"
+
+    outlines [
+        (0, "#000000", 0, 0),      # тонкая обводка
+        (0, "#ffffcc88", 0, 0),    # мягкий glow
+        (12, "#ffffcc44", 0, 0),   # дальний glow
+    ]
 
 ## The color used for a text button when it is neither selected nor hovered.
 define gui.idle_color = '#fff'
@@ -82,9 +92,6 @@ define gui.label_text_size = 30
 ## The size of text on the notify screen.
 define gui.notify_text_size = 30
 
-## The size of the game's title.
-define gui.title_text_size = 90
-
 
 ## Main and Game Menus #########################################################
 
@@ -135,7 +142,7 @@ define gui.namebox_tile = False
 ## number of pixels relative to the left or top side of the textbox, or 0.5 to
 ## center.
 
-#Текст персонада в диалоговом окне
+#Текст персонжда в диалоговом окне
 define gui.dialogue_xpos = 200
 define gui.dialogue_ypos = 44
 
