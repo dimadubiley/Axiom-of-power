@@ -97,14 +97,14 @@ define gui.textbox_yalign = 0.85
 ## These can be a whole number of pixels from the left or top, or 0.5 to center.
 
 #Имя персонада в диалоговом окне
-define gui.name_xpos = 400
-define gui.name_ypos = -395
+define gui.name_xpos = 395
+define gui.name_ypos = -385
 define gui.name_text_size = 50
 define gui.name_xalign = 0.5
 define gui.name_text_font = "name_heroic_textbox.ttf"
 
 #Текст персонжда в диалоговом окне
-define gui.dialogue_xpos = 170
+define gui.dialogue_xpos = 130
 define gui.dialogue_ypos = -270
 define gui.text_size = 50
 define gui.text_font = "dialog_heroic_textbox.ttf"

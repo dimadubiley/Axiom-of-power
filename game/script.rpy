@@ -50,9 +50,12 @@ image olivia angry = "heroes/Olivia/angry.png"
 image olivia sad = "heroes/Olivia/sad.png"
 image olivia shy = "heroes/Olivia/shy.png"
 
+# ТАКСИСТ
+define taxi_driver = Character("  Таксист", image="к", color="#ababab")
+define taxi_driver_nvl = Character("Таксист", kind=nvl, image="edgy")
 
 init python:
-
+    
     gabriela = [
         "gabriela normal",   #0
         "gabriela happy",    #1
@@ -100,20 +103,27 @@ init python:
         yalign=1.0
     )
 
-    def swap_char(char_array, index, at_transform):
+    def swap_char(char_array, index, *transforms):
         renpy.show(
-            char_array[index],   # ← СТРОКА, а не Image()
+            char_array[index],
             tag="main_char",
-            at_list=[at_transform]
+            at_list=list(transforms)
         )
 
+transform slide_in_left:
+    xalign -0.5
+    yalign 1.0
+    alpha 0.0
+    linear 0.5 xalign 0 alpha 1.0
 
 image airport = "gui/BGs/airport.png"
+image taxi_air = "gui/BGs/taxi_dialog.jpeg"
+image in_taxi = "gui/BGs/in_taxi.jpeg"
 
 
 label start:
 
-    scene black
+    scene airport
 
     hide main_char
     dictore "Хитроу встретил меня типичным британским гостеприимством: серым небом и очередями."
@@ -121,18 +131,34 @@ label start:
     dictore "Но это мелочи. Главное испытание впереди: два семестра в Оксфорде по обмену."
     dictore "Из Гарварда — в самую древнюю дыру Англии."
     
-    scene airport
-    $ swap_char(gabriela, 0, small_char)
-    gab_text "Боже, этот акцент... Он уже сверлит мне мозг. Надеюсь, местные профессора хотя бы знают, что такое дезодорант, в отличие от людей в этой толпе"
+    $ swap_char(gabriela, 2, small_char, slide_in_left)
+    gab_text "{i}Боже, этот акцент... Он уже сверлит мне мозг.{/i}"
+    gab_text "{i}Надеюсь, местные профессора хотя бы знают, что такое дезодорант, в отличие от людей в этой толпе.{/i}"
 
-    $ swap_char(mason, 1, small_char)
-    mas_text "Я знаю"
+    scene taxi_air
+    dictore "Я вытащила два тяжелых чемодана на тротуар, высматривая кэб."
+    dictore "Рядом притормозил черный «Nissan Leaf», стекло медленно опустилось."
+    dictore "За рулем сидел мужчина лет сорока с сальной улыбкой."
 
-    $ swap_char(bowie, 3, small_char)
-    bow_text "А я вампир"
+    taxi_driver "Эй, красавица! Давай сюда свои баулы. Подброшу с ветерком."
 
-    $ swap_char(bowie, 0, small_char)
-    bow_text "Ну тут прям очень огромный текст что не могу. Он создан чисто для проверки как себя поведет прям очень огромный текст. Проверка длинного слова танаталогия"
+    scene in_taxi
+    dictore "Я молча позволила загрузить багаж и нырнула на заднее сиденье,"
+    dictore "демонстративно натягивая большие наушники."
+    dictore "Всем своим видом она кричала: «Не влезай — убьет». Машина тронулась."
+    dictore "Через пару минут экран телефона вспыхнул."
+    dictore "Входящий видеовызов: «Маргошка Бейби»."
+
+
+
+    # $ swap_char(mason, 1, small_char)
+    # mas_text "Я знаю"
+
+    # $ swap_char(bowie, 3, small_char)
+    # bow_text "А я вампир"
+
+    # $ swap_char(bowie, 0, small_char)
+    # bow_text "Ну тут прям очень огромный текст что не могу. Он создан чисто для проверки как себя поведет прям очень огромный текст. Проверка длинного слова танаталогия"
 
     #Выбор
     menu:
