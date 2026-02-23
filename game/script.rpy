@@ -22,11 +22,11 @@ image mason angry    = "heroes/Mason/Mangry.webp"
 # BOWIE
 define bow_text = Character("    Боуи", image="к", color="#ababab")
 define bow_text_nvl = Character("Боуи", kind=nvl, image="edgy")
-image bowie shok   = "heroes/Bowie/Bshok.png"
-image bowie flirt    = "heroes/Bowie/Bflirt.png"
-image bowie sad      = "heroes/Bowie/Bsad.png"
-image bowie vampire  = "heroes/Bowie/Bvamp.png"
-image bowie angry  = "heroes/Bowie/Bangry.png"
+image bowie shok   = "heroes/Bowie/Bshok.webp"
+image bowie flirt    = "heroes/Bowie/Bflirt.webp"
+image bowie sad      = "heroes/Bowie/Bsad.webp"
+image bowie vampire  = "heroes/Bowie/Bvamp.webp"
+image bowie angry  = "heroes/Bowie/Bangry.webp"
 
 # DICTORE
 define dictore = Character("        . . .", image="к", color="#ababab")
@@ -52,9 +52,15 @@ image olivia angry = "heroes/Olivia/Oangry.webp"
 image olivia sad = "heroes/Olivia/Osad.webp"
 image olivia flirt = "heroes/Olivia/Oflirt.webp"
 
+# MARGO
 define mar_text = Character("Маргошка Бэйби", image="к", color="#ababab")
 define mar_text_nvl = Character("Маргошка Бэйби", kind=nvl, image="edgy")
-image margo normal = "heroes/Margo/normal.png"
+image margo angry = "heroes/Margo/Mangry.webp"
+image margo flirt = "heroes/Margo/Mflirt.webp"
+image margo normal = "heroes/Margo/Mnormal.webp"
+image margo sad = "heroes/Margo/Msad.webp"
+image margo shok = "heroes/Margo/Mshok.webp"
+image margo strange = "heroes/Margo/Mstrange.webp"
 
 # ТАКСИСТ
 define taxi_driver = Character("  Таксист", image="к", color="#ababab")
@@ -106,7 +112,12 @@ init python:
         "olivia flirt",  #4
     ]
     margo = [
-        "margo normal"
+        "margo normal",  #0
+        "margo sad",     #1
+        "margo angry",   #2
+        "margo shok",    #3
+        "margo strange", #4
+        "margo flirt",   #5
     ]
 
     small_char = Transform(
@@ -142,7 +153,7 @@ label start:
     dictore "Но это мелочи. Главное испытание впереди: два семестра в Оксфорде по обмену."
     dictore "Из Гарварда — в самую древнюю дыру Англии."
     
-    $ swap_char(gabriela, 5,small_char, slide_in_left)
+    $ swap_char(gabriela, 2, small_char, slide_in_left)
     gab_text "{i}Боже, этот акцент... Он уже сверлит мне мозг.{/i}"
     gab_text "{i}Надеюсь, местные профессора хотя бы знают, что такое дезодорант, в отличие от людей в этой толпе.{/i}"
 
@@ -152,6 +163,9 @@ label start:
     dictore "За рулем сидел мужчина лет сорока с сальной улыбкой."
 
     taxi_driver "Эй, красавица! Давай сюда свои баулы. Подброшу с ветерком."
+
+    $ swap_char(gabriela, 0, small_char, slide_in_left)
+    gab_text "{i}Прекрасно. Поездка не обойдется без дешевого флирта{/i}"
 
     scene in_taxi
     dictore "Я молча позволила загрузить багаж и нырнула на заднее сиденье,"
