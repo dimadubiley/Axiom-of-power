@@ -1,54 +1,60 @@
 ﻿# GABRIELA
 define gab_text = Character("Габриэла", image="к", color="#c2c2c2")
 define gab_text_nvl = Character("Габриэла", kind=nvl, image="edgy")
-image gabriela normal   = "heroes/Gabriela/normal.png"
-image gabriela happy    = "heroes/Gabriela/happy.png"
-image gabriela angry    = "heroes/Gabriela/angry.png"
-image gabriela shy      = "heroes/Gabriela/shy.png"
-image gabriela surprise = "heroes/Gabriela/surprise.png"
+image gabriela normal   = "heroes/Gabriela/Gwithoutsmile.webp"
+image gabriela happy    = "heroes/Gabriela/Ghappy.webp"
+image gabriela angry    = "heroes/Gabriela/Gangry.webp"
+image gabriela shy      = "heroes/Gabriela/shy.webp"
+image gabriela surprise = "heroes/Gabriela/surprise.webp"
+image gabriela sad      = "heroes/Gabriela/Gsad.webp"
+
 
 # MASON
 define mas_text = Character("Мейсон", image="к", color="#ababab")
 define mas_text_nvl = Character("Мейсон", kind=nvl, image="edgy")
-image mason normal   = "heroes/Mason/normal.png"
-image mason happy    = "heroes/Mason/happy.png"
-image mason sad      = "heroes/Mason/sad.png"
-image mason shy      = "heroes/Mason/shy.png"
-image mason surprise = "heroes/Mason/surprise.png"
-image mason angry    = "heroes/Mason/angry.png"
+image mason normal   = "heroes/Mason/Maynorm.webp"
+image mason flirt    = "heroes/Mason/Mayflirt.webp"
+image mason sad      = "heroes/Mason/Maysad.webp"
+image mason smile      = "heroes/Mason/Maysmile.webp"
+image mason shok = "heroes/Mason/Mayshok.webp"
+image mason angry    = "heroes/Mason/Mangry.webp"
 
 # BOWIE
 define bow_text = Character("    Боуи", image="к", color="#ababab")
 define bow_text_nvl = Character("Боуи", kind=nvl, image="edgy")
-image bowie normal   = "heroes/Bowie/normal.png"
-image bowie happy    = "heroes/Bowie/happy.png"
-image bowie sad      = "heroes/Bowie/sad.png"
-image bowie vampire  = "heroes/Bowie/vampire.png"
+image bowie shok   = "heroes/Bowie/Bshok.png"
+image bowie flirt    = "heroes/Bowie/Bflirt.png"
+image bowie sad      = "heroes/Bowie/Bsad.png"
+image bowie vampire  = "heroes/Bowie/Bvamp.png"
+image bowie angry  = "heroes/Bowie/Bangry.png"
 
-
+# DICTORE
 define dictore = Character("        . . .", image="к", color="#ababab")
 define dictore_nvl = Character("...", kind=nvl, image="edgy")
 
 # STACEY
 define sta_text = Character("Стейси", image="к", color="#ababab")
 define sta_text_nvl = Character("Стейси", kind=nvl, image="edgy")
-image stacey normal = "heroes/Stecey/normal.png"
-image stacey happy = "heroes/Stecey/happy.png"
-image stacey angry = "heroes/Stecey/angry.png"
-image stacey cry = "heroes/Stecey/cry.png"
-image stacey sad = "heroes/Stecey/sad.png"
-image stacey shy = "heroes/Stecey/shy.png"
-image stacey surprise = "heroes/Stecey/surprise.png"
-image stacey vampire = "heroes/Stecey/vampire.png"
+image stacey normal = "heroes/Stecey/Snorm.webp"
+image stacey flirt = "heroes/Stecey/Sflirt.webp"
+image stacey angry = "heroes/Stecey/Sangry.webp"
+image stacey cry = "heroes/Stecey/Scry.webp"
+image stacey sad = "heroes/Stecey/Ssad.webp"
+image stacey shok = "heroes/Stecey/Sshok.webp"
+image stacey vampire = "heroes/Stecey/Svamp.webp"
 
-# STACEY
+# OLIVIA
 define sta_text = Character("Оливия", image="к", color="#ababab")
 define sta_text_nvl = Character("Оливия", kind=nvl, image="edgy")
-image olivia normal = "heroes/Olivia/normal.png"
-image olivia happy = "heroes/Olivia/happy.png"
-image olivia angry = "heroes/Olivia/angry.png"
-image olivia sad = "heroes/Olivia/sad.png"
-image olivia shy = "heroes/Olivia/shy.png"
+image olivia normal = "heroes/Olivia/Onorm.webp"
+image olivia smile = "heroes/Olivia/Osmile.webp"
+image olivia angry = "heroes/Olivia/Oangry.webp"
+image olivia sad = "heroes/Olivia/Osad.webp"
+image olivia flirt = "heroes/Olivia/Oflirt.webp"
+
+define mar_text = Character("Маргошка Бэйби", image="к", color="#ababab")
+define mar_text_nvl = Character("Маргошка Бэйби", kind=nvl, image="edgy")
+image margo normal = "heroes/Margo/normal.png"
 
 # ТАКСИСТ
 define taxi_driver = Character("  Таксист", image="к", color="#ababab")
@@ -62,44 +68,49 @@ init python:
         "gabriela angry",    #2
         "gabriela shy",      #3
         "gabriela surprise", #4
+        "gabriela sad",      #5
     ]
 
     mason = [
-        "mason normal",   #0
-        "mason happy",    #1
-        "mason sad",      #2
-        "mason shy",      #3
-        "mason surprise", #4
-        "mason angry",    #5
+        "mason normal", #0
+        "mason flirt",  #1
+        "mason sad",    #2
+        "mason smile",  #3
+        "mason shok",   #4
+        "mason angry",  #5
     ]
 
     bowie = [
-        "bowie normal",  #0
-        "bowie happy",   #1
+        "bowie flirt",   #0
+        "bowie shok",    #1
         "bowie sad",     #2
         "bowie vampire", #3
+        "bowie angry",   #4
     ]
 
     stacey = [
-        "stacey normal",   #0
-        "stacey happy",    #1
-        "stacey angry",    #2
-        "stacey cry",      #3
-        "stacey sad",      #4
-        "stacey surprise", #5
-        "stacey vampire",  #6
+        "stacey normal",  #0
+        "stacey happy",   #1
+        "stacey angry",   #2
+        "stacey cry",     #3
+        "stacey sad",     #4
+        "stacey shok",    #5
+        "stacey vampire", #6
     ]
 
     olivia = [
-        "olivia normal",   #0
-        "olivia happy",    #1
-        "olivia angry",    #2
-        "olivia sad",      #3
-        "olivia sad",      #4
+        "olivia normal", #0
+        "olivia smile",  #1
+        "olivia angry",  #2
+        "olivia sad",    #3
+        "olivia flirt",  #4
+    ]
+    margo = [
+        "margo normal"
     ]
 
     small_char = Transform(
-        zoom=0.475,
+        zoom=0.9,
         yalign=1.0
     )
 
@@ -131,7 +142,7 @@ label start:
     dictore "Но это мелочи. Главное испытание впереди: два семестра в Оксфорде по обмену."
     dictore "Из Гарварда — в самую древнюю дыру Англии."
     
-    $ swap_char(gabriela, 2, small_char, slide_in_left)
+    $ swap_char(gabriela, 5,small_char, slide_in_left)
     gab_text "{i}Боже, этот акцент... Он уже сверлит мне мозг.{/i}"
     gab_text "{i}Надеюсь, местные профессора хотя бы знают, что такое дезодорант, в отличие от людей в этой толпе.{/i}"
 
