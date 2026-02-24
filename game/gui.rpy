@@ -79,7 +79,7 @@ define gui.notify_text_size = 30
 ## Main and Game Menus #########################################################
 
 ## The images used for the main and game menus.
-define gui.main_menu_background = "gui/main_menu.png"
+define gui.main_menu_background = "gui/main_menu.webp"
 define gui.game_menu_background = "gui/game_menu.png"
 
 
@@ -98,16 +98,17 @@ define gui.textbox_yalign = 0.85
 
 #Имя персонада в диалоговом окне
 define gui.name_xpos = 395
-define gui.name_ypos = -385
+define gui.name_ypos = -375
 define gui.name_text_size = 50
 define gui.name_xalign = 0.5
 define gui.name_text_font = "name_heroic_textbox.ttf"
 
 #Текст персонжда в диалоговом окне
-define gui.dialogue_xpos = 130
-define gui.dialogue_ypos = -270
+define gui.dialogue_xpos = 125
+define gui.dialogue_ypos = -275
 define gui.text_size = 50
 define gui.text_font = "dialog_heroic_textbox.ttf"
+define gui.dialogue_width = 850
 define gui.text_color = '#ffffff'
 
 ## The horizontal alignment of the character's name. This can be 0.0 for left-
@@ -126,9 +127,6 @@ define gui.namebox_borders = Borders(10, 10, 10, 10)
 ## If True, the background of the namebox will be tiled, if False, the
 ## background of the namebox will be scaled.
 define gui.namebox_tile = False
-
-## The maximum width of dialogue text, in pixels.
-define gui.dialogue_width = 825
 
 ## The horizontal alignment of the dialogue text. This can be 0.0 for left-
 ## aligned, 0.5 for centered, and 1.0 for right-aligned.

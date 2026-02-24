@@ -10,7 +10,7 @@ image gabriela sad      = "heroes/Gabriela/Gsad.webp"
 
 
 # MASON
-define mas_text = Character("Мейсон", image="к", color="#ababab")
+define mas_text = Character("Мейсон", image="к", color="#c2c2c2")
 define mas_text_nvl = Character("Мейсон", kind=nvl, image="edgy")
 image mason normal   = "heroes/Mason/Maynorm.webp"
 image mason flirt    = "heroes/Mason/Mayflirt.webp"
@@ -20,7 +20,7 @@ image mason shok = "heroes/Mason/Mayshok.webp"
 image mason angry    = "heroes/Mason/Mangry.webp"
 
 # BOWIE
-define bow_text = Character("    Боуи", image="к", color="#ababab")
+define bow_text = Character("    Боуи", image="к", color="#c2c2c2")
 define bow_text_nvl = Character("Боуи", kind=nvl, image="edgy")
 image bowie shok   = "heroes/Bowie/Bshok.webp"
 image bowie flirt    = "heroes/Bowie/Bflirt.webp"
@@ -29,11 +29,11 @@ image bowie vampire  = "heroes/Bowie/Bvamp.webp"
 image bowie angry  = "heroes/Bowie/Bangry.webp"
 
 # DICTORE
-define dictore = Character("        . . .", image="к", color="#ababab")
+define dictore = Character("        . . .", image="к", color="#c2c2c2")
 define dictore_nvl = Character("...", kind=nvl, image="edgy")
 
 # STACEY
-define sta_text = Character("Стейси", image="к", color="#ababab")
+define sta_text = Character("Стейси", image="к", color="#c2c2c2")
 define sta_text_nvl = Character("Стейси", kind=nvl, image="edgy")
 image stacey normal = "heroes/Stecey/Snorm.webp"
 image stacey flirt = "heroes/Stecey/Sflirt.webp"
@@ -44,7 +44,7 @@ image stacey shok = "heroes/Stecey/Sshok.webp"
 image stacey vampire = "heroes/Stecey/Svamp.webp"
 
 # OLIVIA
-define sta_text = Character("Оливия", image="к", color="#ababab")
+define sta_text = Character("Оливия", image="к", color="#c2c2c2")
 define sta_text_nvl = Character("Оливия", kind=nvl, image="edgy")
 image olivia normal = "heroes/Olivia/Onorm.webp"
 image olivia smile = "heroes/Olivia/Osmile.webp"
@@ -53,7 +53,7 @@ image olivia sad = "heroes/Olivia/Osad.webp"
 image olivia flirt = "heroes/Olivia/Oflirt.webp"
 
 # MARGO
-define mar_text = Character("Маргошка Бэйби", image="к", color="#ababab")
+define mar_text = Character("Маргошка Бэйби", image="к", color="#c2c2c2")
 define mar_text_nvl = Character("Маргошка Бэйби", kind=nvl, image="edgy")
 image margo angry = "heroes/Margo/Mangry.webp"
 image margo flirt = "heroes/Margo/Mflirt.webp"
@@ -63,7 +63,7 @@ image margo shok = "heroes/Margo/Mshok.webp"
 image margo strange = "heroes/Margo/Mstrange.webp"
 
 # ТАКСИСТ
-define taxi_driver = Character("  Таксист", image="к", color="#ababab")
+define taxi_driver = Character("  Таксист", image="к", color="#c2c2c2")
 define taxi_driver_nvl = Character("Таксист", kind=nvl, image="edgy")
 
 init python:
@@ -125,6 +125,9 @@ init python:
         yalign=1.0
     )
 
+    def textbox(n):
+        store.tb_id = n
+
     def swap_char(char_array, index, *transforms):
         renpy.show(
             char_array[index],
@@ -138,9 +141,25 @@ transform slide_in_left:
     alpha 0.0
     linear 0.5 xalign 0 alpha 1.0
 
-image airport = "gui/BGs/airport.png"
-image taxi_air = "gui/BGs/taxi_dialog.jpeg"
-image in_taxi = "gui/BGs/in_taxi.jpeg"
+image airport = "gui/BGs/BgAirplaneInside.webp"
+image taxi_air = "gui/BGs/BgAirplaneStreet.webp"
+image in_taxi = "gui/BGs/BgCar.webp"
+
+image r1_d = "gui/BGs/BgRoom1Day.webp"
+image r1_n = "gui/BGs/BgRoom1Night.webp"
+
+image r2_d = "gui/BGs/BgRoom2Day.webp"
+image r2_n = "gui/BGs/BgRoom2Night.webp"
+
+image r3_d = "gui/BGs/BgRoom3Day.webp"
+image r3_n = "gui/BGs/BgRoom3Night.webp"
+
+image cl = "gui/BGs/BgClass.webp"
+image dv = "gui/BGs/BgDvor.webp"
+
+image kor_c = "gui/BGs/BgKoridorCampus.webp"
+image kor_u = "gui/BGs/BgKoridorUniv.webp"
+image oks = "gui/BGs/BgOksford.webp"
 
 
 label start:
@@ -148,11 +167,12 @@ label start:
     scene airport
 
     hide main_char
-    dictore "Хитроу встретил меня типичным британским гостеприимством: серым небом и очередями."
-    dictore "Перелет из Штатов прошел терпимо, если не считать легкой турбулентности над Атлантикой."
-    dictore "Но это мелочи. Главное испытание впереди: два семестра в Оксфорде по обмену."
+    dictore "Хитроу встретил меня типичным британским гостеприимством:"
+    dictore "серым небом и очередями. Перелет из Штатов прошел терпимо,"
+    dictore "если не считать легкой турбулентности над Атлантикой. Но это мелочи."
+    dictore "Главное испытание впереди: два семестра в Оксфорде по обмену."
     dictore "Из Гарварда — в самую древнюю дыру Англии."
-    
+
     $ swap_char(gabriela, 2, small_char, slide_in_left)
     gab_text "{i}Боже, этот акцент... Он уже сверлит мне мозг.{/i}"
     gab_text "{i}Надеюсь, местные профессора хотя бы знают, что такое дезодорант, в отличие от людей в этой толпе.{/i}"

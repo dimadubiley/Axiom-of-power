@@ -97,15 +97,14 @@ style frame:
 
 screen say(who, what):
     style_prefix "say"
-
     window:
         id "window"
 
         if who is not None:
-
             window:
                 id "namebox"
                 style "namebox"
+
                 text who id "who"
 
         text what id "what"
@@ -115,10 +114,7 @@ screen say(who, what):
 
     ## Select quick menu style to use.
     ## Show the quick menu only when the say screen is shown
-
     use quick_menu
-
-
 ## Make the namebox available for styling through the Character object.
 init python:
     config.character_id_prefixes.append('namebox')
@@ -138,7 +134,7 @@ style window:
     yalign gui.textbox_yalign
     ysize gui.textbox_height
 
-    background Image("gui/textbox.png", xalign=0.5, yalign=1.0)
+    background Image("gui/TextBox2.webp", xalign=0.5, yalign=1.0)
 
 style namebox:
     xpos gui.name_xpos
@@ -155,6 +151,7 @@ style say_label:
     xalign gui.name_xalign
     yalign 0.5
 
+
 style say_dialogue:
     properties gui.text_properties("dialogue")
 
@@ -162,16 +159,6 @@ style say_dialogue:
     xsize gui.dialogue_width
     ypos gui.dialogue_ypos
 
-
-## Input screen ################################################################
-##
-## This screen is used to display renpy.input. The prompt parameter is used to
-## pass a text prompt in.
-##
-## This screen must create an input displayable with id "input" to accept the
-## various input parameters.
-##
-## https://www.renpy.org/doc/html/screen_special.html#input
 
 screen input(prompt):
     style_prefix "input"
