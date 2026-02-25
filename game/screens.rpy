@@ -265,9 +265,6 @@ screen navigation():
                     xalign 0.99
                     yalign 0.1
                     textbutton "≡" action Hide("navigation"), Return()
-                
-
-    
 
 
 style navigation_menu_frame:
@@ -566,8 +563,6 @@ screen extras():
         null height 10
         bar ysize 10 xsize 1000
         null height 10
-
-
 
 
 screen nav_content():
@@ -1051,8 +1046,6 @@ screen preferences():
         elif settings_menu_selector == "text_settings":
             use text_settings
 
-
-
 screen system_settings():
 
     vbox:
@@ -1187,7 +1180,6 @@ screen system_settings():
                     idle_foreground Text(_("Transitions"), xalign=0.5, yalign=0.5)
                     action InvertSelected(Preference("transitions", "toggle"))
                     tooltip _("Skip through scene transitions")
-
 
 screen audio_settings():
     python:
